@@ -20,7 +20,17 @@ import {
 import MapView from 'react-native-maps';
 import {Marker} from 'react-native-maps';
 
+import MapViewDirections from 'react-native-maps-directions';
+
 const markerImg = require('./imgs/compass.png');
+const origin = {
+  latitude: -7.333088,
+  longitude: 112.789529,
+};
+const destination = {
+  latitude: -7.3018866951694,
+  longitude: 112.77376851432145,
+};
 
 export default class App extends Component {
   constructor(props) {
@@ -113,6 +123,17 @@ export default class App extends Component {
                  />
               ))
             }
+
+            {/* <Marker coordinate={coordinates[0]} />
+            <Marker coordinate={coordinates[2]} /> */}
+
+            {/* <MapViewDirections
+              origin={origin} 
+              destination={destination} 
+              apikey={'AIzaSyASxUqUKOlMbp45836pOUdfg7QZu7q9qxE'}
+              strokeWidth={3} 
+              strokeColor="hotpink"
+             /> */}
         </MapView>
       </View>
     );
